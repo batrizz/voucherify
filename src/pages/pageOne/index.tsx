@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Input, Modal, Title, CardsButtons, ButtonsFooter } from "./styles"
+import { Container, Modal, Title, CardsButtons, ButtonsFooter } from "./styles"
 
 import { StepWizardChildProps } from 'react-step-wizard';
 
@@ -15,43 +15,40 @@ const PageOne: React.FC<Props> = (Props) => {
 
           <Title>
           <h1 className="oi">Criar Campanha</h1>
-          <Input  placeholder="Nome">Nome</Input>
-
+          <input type="text" placeholder="Nome" />
           </Title>
-        <section>
+        </section>
 
         <Modal>
-          <div>
+          <div className="Date">
             <h2 >Data Inicial</h2>
-            <a><img src="" alt="img" /></a>
+            <button><img src="/calenda.svg" alt="img" /></button>
             <input type="text" />
 
-            <a href=""><img src="" alt="img" /></a>
+            <a href=""><img src="/clock.svg" alt="img" /></a>
             <input type="text" />
 
-            <button>remove</button>
+            <button><img src="/remove.svg" alt="" /></button>
           </div>
 
           <div>
             <h2>Data Final</h2>
-            <a><img src="" alt="img" /></a>
+            <button><img src="/calenda.svg" alt="img" /></button>
             <input type="text" />
 
-            <a href=""><img src="" alt="img" /></a>
+            <a href=""><img src="/clock.svg" alt="img" /></a>
             <input type="text" />
 
-            <button>remove</button>
+            <button><img src="/remove.svg" alt="" /></button>
           </div>
           </Modal>
 
-        </section>
-
 
           <CardsButtons>
-          <a><img src="" alt="" /></a>
-          <a><img src="" alt="" /></a>
-          <a><img src="" alt="" /></a>
-          <a><img src="" alt="" /></a>
+            <button className="actived"><img src="/desconto.svg"/>Compre e ganhe<p>Compre duas peças e leve a treceira de gratis, leve a treceira de gratis</p></button>
+            <button><img src="/NewClock.svg"/>Descontos Progressivos<p>Lorem ipsum, dolor sit amet, leve a treceira de gratis, leve a treceira de gratis</p></button>
+            <button><img src="/Carrinho.svg" />Desconto Valor Total <p>Lorem ipsum, dolor sit amet, leve a treceira de gratis, leve a treceira de gratis</p></button>
+            <button><img src="/entrega.svg" />Frete Gratis<p>Lorem ipsum, dolor sit amet,leve a treceira de gratis, </p></button>
           </CardsButtons>
 
 
@@ -59,7 +56,6 @@ const PageOne: React.FC<Props> = (Props) => {
           <button onClick={Props.previousStep}>Cancelar</button>
           <button onClick={Props.nextStep}>Avançar</button>
           </ButtonsFooter>
-        </section>
        
 
       </Container>

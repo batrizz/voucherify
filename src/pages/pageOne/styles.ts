@@ -4,91 +4,143 @@ import styled from 'styled-components'
 export const Container = styled.div `
   
    display: flex;
+   flex-direction: column;
    justify-content: center;
-   align-items: center;
+   align-items: start;
+ 
 
    height: 100vh;
+   padding: 2rem;
    background-color: #E5E5E5;
 
-   margin-left: -25rem;
-
-    
-   section{
-      margin-top: 1rem;
-   }
-
-   form{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      
-      
-   }
-    
-    ul{
-       
-
-      
-    }
+   
+   overflow-y: auto;
 `;
 
-export const Input = styled.div `
-          font-size: 1rem;
-          border: none;
-          border-bottom: 2px solid #5C5FFE;
-          width: 20rem;
+export const Title = styled.div`
+   margin-left: 1rem;
+
+   h1{
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      margin-left: -2rem;
+      margin-top: 15rem;
+   }
+  input{
+   font-family: "Poppins";
+   font-size: 1.5rem;
+   font-weight: 200; 
+   border: none;
+          
+   border-bottom: 2px solid #5C5FFE;
+   width: 22rem;
+   margin-bottom: 2rem;
+   background-color: #E5E5E5;
+  }   
 `;
+
 
 export const Modal = styled.div `
-   width: 40rem;
-   height: 10rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 1.5rem;
+
+   width: 45rem;
+  
    border-radius: 15px;
    background-color: #FFFFFF;
-   margin-left: 1rem;
+   padding: 2rem;
+   padding-bottom: 2.5rem;
 
    h2{
       font-size: 1.5rem;
+      font-family: "Poppins";
+       font-weight: 400;
+       margin-bottom:2rem;
    }
+
+   input{
+      font-family: "Poppins";
+          font-size: 1rem;
+          font-weight: 400;
+          border: none;
+          
+          border-bottom: 2px solid #5C5FFE;
+   }
+
+   button{
+      border: none;
+      background: none;
+      cursor: pointer;
+   }
+
+   input{
+      width: 15rem;
+   }
+
+  
+
 `
 
-export const Title = styled.div`
-   font-size: 1.5rem;
-   margin-left: 1rem;
-   
-   h1{
-      margin-bottom: 2rem;
-      margin-left: -3rem;
-   }
 
-   
-`;
-
-
-export const CardsButtons = styled.div `
+export const CardsButtons = styled.div`
+      width: 45rem;
       display: flex;
-      margin: 5rem;
+      margin-top: 1.5rem;
       align-items: center;
       justify-content: space-around;
+      gap: 1rem;
 
-      a{
-         background-color: black;
-         width: 5rem;
-         height: 5rem;
+      button{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         font-family: "Poppins";
+         color: white;
+         background-color: #FFFFFF;
+         color: #113B63;
+         width: 12.5rem;
+         height: 12.25rem;
+         padding: 0.95rem;
+         border-radius: 15px;
+         font-size: 0.85rem;
+         border: none;
+         cursor: pointer;
+
+         &.actived {
+            background-color: #5C5FFE;
+            color: #FFFFFF;
+
+            
+         }
+      } 
+
+      p{
+         font-size: 0.6rem;
       }
-      
 `;
 
+
 export const ButtonsFooter = styled.div`
+
+     display: flex;
+     gap: 2rem;
      button{
-          width: 7rem;
-          height: 2rem;
+        
+          width: 9rem;
+          height: 3rem;
           font-size: 1rem;
-          margin: 0 15px;
+       
           border-radius: 3px;
           border: none;
           cursor: pointer;
           color: #000000;
           background-color: #FFFFFF;
+          margin-top: 3.5rem;
 
           & + button {
              background-color: #5C5FFE;
