@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from "./styles"
+import { Container, Input, Modal, Title, CardsButtons, ButtonsFooter } from "./styles"
 
 import { StepWizardChildProps } from 'react-step-wizard';
 
@@ -12,11 +12,17 @@ const PageOne: React.FC<Props> = (Props) => {
     
       <Container>
         <section>
-          <h1 className={`oi`}>Criar Campanha</h1>
-          <input type="text" placeholder="Nome"></input>
 
+          <Title>
+          <h1 className="oi">Criar Campanha</h1>
+          <Input  placeholder="Nome">Nome</Input>
+
+          </Title>
+        <section>
+
+        <Modal>
           <div>
-            <h2 className="dfsdf">Data Inicial</h2>
+            <h2 >Data Inicial</h2>
             <a><img src="" alt="img" /></a>
             <input type="text" />
 
@@ -36,35 +42,23 @@ const PageOne: React.FC<Props> = (Props) => {
 
             <button>remove</button>
           </div>
+          </Modal>
 
-          <form>
-            <div>
-              <h2>Compre e ganhe</h2>
-              <p>Compre duas peças e leve a terceira de graça</p>
-            </div>
-
-            <div>
-              <img src="" alt="img" />
-              <h2>Compre e ganhe</h2>
-              <p>Compre duas peças e leve a terceira de graça</p>
-            </div>
-
-            <div>
-              <img src="" alt="img" />
-              <h2>Compre e ganhe</h2>
-              <p>Compre duas peças e leve a terceira de graça</p>
-            </div>
-
-            <div>
-              <img src="" alt="img" />
-              <h2>Compre e ganhe</h2>
-              <p>Compre duas peças e leve a terceira de graça</p>
-            </div>
-          </form>
+        </section>
 
 
-          <button onClick={Props.previousStep}>Voltar</button>
-        <button onClick={Props.nextStep}>Avançar</button>
+          <CardsButtons>
+          <a><img src="" alt="" /></a>
+          <a><img src="" alt="" /></a>
+          <a><img src="" alt="" /></a>
+          <a><img src="" alt="" /></a>
+          </CardsButtons>
+
+
+        <ButtonsFooter>
+          <button onClick={Props.previousStep}>Cancelar</button>
+          <button onClick={Props.nextStep}>Avançar</button>
+          </ButtonsFooter>
         </section>
        
 
