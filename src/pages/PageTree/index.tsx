@@ -3,7 +3,8 @@ import React from 'react';
 
 
 import { StepWizardChildProps } from 'react-step-wizard';
-import { Container, ButtonsFooter, Modal, Produtos, Aviso, Title} from "./styles"
+
+import { Container, ButtonsFooter, Modal, Produtos, Aviso, Options, Title, BtnProdutos} from "./styles"
 
 
 interface Props extends Partial<StepWizardChildProps> {}
@@ -16,19 +17,24 @@ const PageTree: React.FC<Props> = (Props) => {
         <h1 >Criar Campanha</h1>
          </Title>
        <Modal>
-        
          <Produtos>
          <h1>Adicionar/excluir produtos</h1>
          <div className="btngap">
-            <h2>Desconto<button className="btnlink"><p>Adicionar Produto</p></button></h2>
+            <h2>Desconto</h2>
+             <a href="#"> <p>Adiconar Produtos</p></a> 
+           <BtnProdutos>
             <button>Produto 1</button>
             <button>Produto 2</button>
+            </BtnProdutos>
           </div>
 
           <div>
-            <h2>Excluir<button className="btnlink2"><p>Adicionar Produtos</p></button></h2>
+            <h2>Excluir</h2>
+            <a href="#"> <p>Adiconar Produtos</p></a> 
+            <BtnProdutos>
             <button>Produto 3</button>
             <button>Produto 4</button>
+            </BtnProdutos>
         
           </div>
           </Produtos>

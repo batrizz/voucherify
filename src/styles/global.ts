@@ -29,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: column;
       justify-content: space-around;
       max-width: 15rem;
+      
      
         
          button{
@@ -48,6 +49,8 @@ export const GlobalStyles = createGlobalStyle`
            background-color: #FFFFFF;
            color: #5C5FFE;
            border: none;
+
+           
          }
     }
   }

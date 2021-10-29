@@ -38,11 +38,13 @@ export const Title = styled.div`
    width: 22rem;
    margin-bottom: 2rem;
    background-color: #E5E5E5;
+
+   outline: none;
   }   
 `;
 
 
-export const Modal = styled.div `
+export const NewModal = styled.div `
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -67,6 +69,7 @@ export const Modal = styled.div `
           font-size: 1rem;
           font-weight: 400;
           border: none;
+          outline: none;
           
           border-bottom: 2px solid #5C5FFE;
    }

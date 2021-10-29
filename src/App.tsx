@@ -11,14 +11,13 @@ import { GlobalStyles } from "./styles/global"
 function App() {
   return (
     <>
-      <GlobalStyles />
+    <GlobalStyles />
       <StepWizard className="wizard" nav={<Test />}>
         <PageOne />
         <PageTwo />
         <PageTree />
         <PageFour />
-      </StepWizard >
-
+    </StepWizard >
     </>
   );
 }
