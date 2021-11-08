@@ -2,33 +2,41 @@ import PageFour from "./pages/PageFour";
 import PageOne from "./pages/pageOne";
 import PageTree from "./pages/PageTree";
 import PageTwo from "./pages/PageTwo";
+import 'animate.css';
 
 import StepWizard, { StepWizardChildProps } from "react-step-wizard";
 
 
 import { GlobalStyles } from "./styles/global"
+import { useState } from "react";
+
 
 function App() {
+
+
   return (
     <>
-    <GlobalStyles />
-      <StepWizard className="wizard" nav={<Test />}>
+      <GlobalStyles />
+      <StepWizard className="wizard " nav={<Navegation />}>
         <PageOne />
         <PageTwo />
         <PageTree />
         <PageFour />
-    </StepWizard >
+      </StepWizard >
     </>
   );
 }
 
 interface Props extends Partial<StepWizardChildProps> { }
-function Test(props: Props) {
-console.log(props)
+
+function Navegation(props: Props) {
+  
+  const Current = Number(props.currentStep) -1;
+
   return (
     <div className="nav">
       {Array.from(Array(props?.totalSteps).keys()).map(step => (
-        <button>{step + 1}</button>
+        <button className={`${ Current === step ? "active" : step < Current ? "actived" : "" }`}>{step + 1}</button>
       ))}
     </div>
   )

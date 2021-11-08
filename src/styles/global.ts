@@ -11,6 +11,24 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root{
+    --background-color: #FFFFFF;
+
+    --color-button: #5C5FFE;
+    --button-close: #E96379;
+    --text-color: #FFFFFF;
+    --color-linha: #EFEFEF;
+    --text-gray: #113B63; 
+    --text-black: #000000;
+  
+  }
+
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
     
   }
 
@@ -19,8 +37,13 @@ export const GlobalStyles = createGlobalStyle`
 
     width: 100%;
 
+    animation-duration: 2s;
+
     > div {
+      animation-duration: 2s;
       width: 100%;
+
+      z-index: 0;
     }
 
     .nav {
@@ -46,11 +69,19 @@ export const GlobalStyles = createGlobalStyle`
            height: 4rem;
            border-radius: 50px;
 
-           background-color: #FFFFFF;
-           color: #5C5FFE;
-           border: none;
+           background-color: #0000001A;
+           color: #0000004D;
+           border: 1px solid #0000001A;
 
-           
+           &.active {
+            background-color: #FFFFFF;
+            color: #5C5FFE;
+            border: 1px solid #00000033;
+           }
+           &.actived {
+            background-color: #5C5FFE;
+           color: #fff;
+           }
          }
     }
   }

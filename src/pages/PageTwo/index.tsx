@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ModalComponent from "../../components/Modelo/Modal"
 
-import { Container, ButtonsFooter, Modal, Produtos, Aviso, Options, Title, BtnProdutos} from "./styles"
+import { Container, ButtonsFooter, NewModal, Produtos, Aviso, Title, BtnProdutos} from "./styles"
 import { StepWizardChildProps } from 'react-step-wizard';
 
 interface Props extends Partial<StepWizardChildProps> { }
 
 const PageTwo: React.FC<Props> = (Props) => {
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  } 
+  
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <Container>  
+
       <Title>
         <h1 >Criar Campanha</h1>
          </Title>
-       <Modal>
+       <NewModal>
+
          <Produtos>
          <h1>Adicionar/excluir produtos</h1>
          <div className="btngap">
             <h2>Desconto</h2>
-             <a href="#"> <p>Adiconar Produtos</p></a> 
+            <p onClick={openModal}>Adiconar Produtos</p>
            <BtnProdutos>
             <button>Produto 1</button>
             <button>Produto 2</button>
@@ -25,7 +39,7 @@ const PageTwo: React.FC<Props> = (Props) => {
 
           <div>
             <h2>Excluir</h2>
-            <a href="#"> <p>Adiconar Produtos</p></a> 
+            <p onClick={openModal}>Adiconar Produtos</p> 
             <BtnProdutos>
             <button>Produto 3</button>
             <button>Produto 4</button>
@@ -37,14 +51,15 @@ const PageTwo: React.FC<Props> = (Props) => {
            <a><img src="aviso.svg"/>A regra dos produtos excluídos tem prioridade sobre a regra dos produtos incluídos. Se a coleção excluída contiver itens incluídos,
             então um desconto não será concedido a esses itens.</a>
           </Aviso>    
-       </Modal>
+       </NewModal>
 
-       <ButtonsFooter>
-        <button onClick={Props.previousStep}>Voltar</button>
-        <button onClick={Props.nextStep}>Avançar</button>
-      </ButtonsFooter>
-
-    </Container>
+        <ButtonsFooter> 
+         <button onClick={Props.previousStep}>Voltar</button> 
+         <button onClick={Props.nextStep}>Avançar</button> 
+       </ButtonsFooter> 
+    
+       <ModalComponent  modalIsOpen={modalIsOpen} closeModal={closeModal}/>
+    </Container >
   )
 }
 

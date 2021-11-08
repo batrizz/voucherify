@@ -8,39 +8,36 @@ export const Container = styled.div `
    justify-content: center;
    align-items: start;
  
-
    height: 100vh;
-   padding: 2rem;
+   padding-bottom:4rem;
    background-color: #E5E5E5;
-
    
    overflow-y: auto;
 `;
 
 export const Title = styled.div`
-   margin-left: 1rem;
-
-   h1{
+     h1{
       font-family: "Poppins";
       font-weight: 500;
       font-size: 2rem;
-      margin-bottom: 2rem;
-      margin-left: -2rem;
-      margin-top: 15rem;
+      color: #113B63;
+      padding: 21rem 0 2rem 0;
    }
   input{
    font-family: "Poppins";
    font-size: 1.5rem;
    font-weight: 200; 
    border: none;
+   color:#113B6399;
           
-   border-bottom: 2px solid #5C5FFE;
+   border-bottom: 2px solid #5C5FFECC;
+   opacity: 80%;
    width: 22rem;
    margin-bottom: 2rem;
    background-color: #E5E5E5;
 
    outline: none;
-  }   
+  }    
 `;
 
 
@@ -57,21 +54,27 @@ export const NewModal = styled.div `
    padding: 2rem;
    padding-bottom: 2.5rem;
 
+
    h2{
       font-size: 1.5rem;
       font-family: "Poppins";
        font-weight: 400;
        margin-bottom:2rem;
+       opacity: 80%;
    }
 
    input{
-      font-family: "Poppins";
+         font-family: "Poppins";
           font-size: 1rem;
           font-weight: 400;
           border: none;
           outline: none;
           
           border-bottom: 2px solid #5C5FFE;
+          opacity: 80%;
+          ::-webkit-calendar-picker-indicator {
+    background: none;
+}
    }
 
    button{
@@ -82,11 +85,10 @@ export const NewModal = styled.div `
 
    input{
       width: 15rem;
+  
    }
 
-  
-
-`
+`;
 
 
 export const CardsButtons = styled.div`
@@ -111,44 +113,52 @@ export const CardsButtons = styled.div`
          padding: 0.95rem;
          border-radius: 15px;
          font-size: 0.85rem;
+         font-weight: 550;
          border: none;
          cursor: pointer;
 
          &.actived {
             background-color: #5C5FFE;
             color: #FFFFFF;
-
-            
+         }
+         svg path{
+            fill: black;
          }
       } 
-
       p{
-         font-size: 0.6rem;
+         font-size: 0.65rem;
+         font-weight: 500;
       }
 `;
 
 
 export const ButtonsFooter = styled.div`
-
+     
      display: flex;
      gap: 2rem;
      button{
-        
+          
+          font-family: "Poppins";
+          font-weight: 500;
           width: 9rem;
           height: 3rem;
           font-size: 1rem;
+
        
           border-radius: 3px;
-          border: none;
+          border: 1px solid #00000033;
           cursor: pointer;
           color: #000000;
           background-color: #FFFFFF;
           margin-top: 3.5rem;
+          opacity: 70%;
 
           & + button {
              background-color: #5C5FFE;
              background: rgba(92, 95, 254, 0.2);
              color: #5C5FFE;
+             opacity:100%;
+             border:none;
           }
        }
 `
