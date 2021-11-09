@@ -116,19 +116,21 @@ export const CardsButtons = styled.div`
          font-weight: 550;
          border: none;
          cursor: pointer;
-
-         &.actived {
+        
+         &.actived,
+         &:hover {
             background-color: #5C5FFE;
             color: #FFFFFF;
-         }
+            transition: .2s ease-in;
          svg path{
-            fill: black;
+            fill: white;
          }
-      } 
+      }
       p{
          font-size: 0.65rem;
          font-weight: 500;
       }
+   }
 `;
 
 
